@@ -1,0 +1,70 @@
+* {
+    color: #fff;
+}
+
+body {
+    background-color: #343541;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+h1 {
+    font-size: 33px;
+    font-weight: 600;
+    padding: 200px;
+}
+
+.side-bar {
+    width: 244px;
+    height: 100vh;
+    display: flex;
+    background-color: #000000;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.main {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: space-between;
+    height: 100vh;
+}
+
+.info {
+    font-size: 11px;
+
+}
+
+button {
+    background-color: #000; /* Black background color */
+    color: #fff; /* White text color */
+    border: none; /* Remove default border */
+    padding: 10px 20px; /* Add some padding for better visuals */
+    cursor: pointer; /* Change cursor to pointer to indicate it's clickable */
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+button:hover {
+    background-color: #333; /* Darker shade of black for hover effect */
+}
+
+input[type="text"] {
+    color: #000; /* Black text color */
+    background-color: #fff; /* You might want to ensure the background is white or light for better contrast */
+    border: 1px solid #ccc; /* Add a subtle border */
+    padding: 10px; /* Add some padding for better visuals */
+    margin: 10px 0; /* Add some margin for spacing */
+}
+
+input[type="text"]:focus {
+    border-color: #666; /* Darker border color on focus for better visibility */
+    outline: none; /* Remove the default focus outline */
+}
+
+.input-container #submit {
+    position: absolute;
+    cursor: pointer;
+}
