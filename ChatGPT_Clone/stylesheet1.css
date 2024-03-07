@@ -3,10 +3,47 @@
 }
 
 body {
-    background-color: #343541;
+    display: flex;
+    flex-direction: row; /* This ensures that the sidebar and main content are laid out in a row */
     margin: 0;
     padding: 0;
+    background-color: #343541;
+}
+
+.side-bar {
+    width: 244px; /* Keep the sidebar width as is */
+    height: 100vh;
+    background-color: #000;
     display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.main {
+    flex-grow: 1; /* This allows the main section to take up the remaining space */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* This centers the content horizontally */
+    text-align: center;
+    justify-content: space-between;
+    height: 100vh;
+    margin-left: 244px; /* This should be at least the width of the sidebar to prevent overlapping */
+}
+
+.input-container {
+    display: flex;
+    justify-content: center; /* Center the input horizontally within the container */
+    position: relative;
+    width: 100%;
+    max-width: 650px; /* Adjust this value as needed to fit your design */
+}
+
+.bottom-section{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 h1 {
@@ -15,56 +52,75 @@ h1 {
     padding: 200px;
 }
 
-.side-bar {
-    width: 244px;
-    height: 100vh;
-    display: flex;
-    background-color: #000000;
-    flex-direction: column;
-    justify-content: space-between;
+.info, .nav p {
+    font-size: 11px;
+    padding: 10px;
+    color: rgba(255,255,255,0.5);
 }
 
-.main {
-    display:flex;
+.bottom-section, .input-container {
+    width: 100%;
+    display: flex;
     flex-direction: column;
     align-items: center;
-    text-align: center;
-    justify-content: space-between;
-    height: 100vh;
 }
 
-.info {
-    font-size: 11px;
+input {
+    border: none;
+    background-color: #959494; /* Adjusted to a solid gray for consistency */
+    color: #000; /* Text color */
+    width: 100%;
+    max-width: 650px; /* Max width moved from .input-container */
+    font-size: 20px;
+    padding: 12px 15px;
+    border-radius: 5px;
+    margin: 10px 0;
+    box-shadow: rgba(0,0,0,0.05) 0 54px 55px,
+                rgba(0,0,0,0.05) 0 -12px 30px,
+                rgba(0,0,0,0.05) 0 4px 6px,
+                rgba(0,0,0,0.05) 0 12px 3px,
+                rgba(0,0,0,0.05) 0 -3px 5px;
+}
 
+input:focus {
+    outline: none;
+    border-color: #666; /* Optional: Enhanced focus visibility */
 }
 
 button {
-    background-color: #000; /* Black background color */
-    color: #fff; /* White text color */
-    border: none; /* Remove default border */
-    padding: 10px 20px; /* Add some padding for better visuals */
-    cursor: pointer; /* Change cursor to pointer to indicate it's clickable */
-    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+    border: solid 0.5px rgba(255,255,255,0.5);
+    background-color: transparent; 
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px;
 }
 
 button:hover {
-    background-color: #333; /* Darker shade of black for hover effect */
-}
-
-input[type="text"] {
-    color: #000; /* Black text color */
-    background-color: #fff; /* You might want to ensure the background is white or light for better contrast */
-    border: 1px solid #ccc; /* Add a subtle border */
-    padding: 10px; /* Add some padding for better visuals */
-    margin: 10px 0; /* Add some margin for spacing */
-}
-
-input[type="text"]:focus {
-    border-color: #666; /* Darker border color on focus for better visibility */
-    outline: none; /* Remove the default focus outline */
+    background-color: #333; /* Darker shade for hover */
+    cursor: pointer;
 }
 
 .input-container #submit {
     position: absolute;
+    right: 0;
+    bottom: 23px;
+    cursor: pointer;
+}
+
+nav {
+    border-top: solid 0.5px rgba(255,255,255,0.5);
+    padding: 10px;
+    margin: 10px;
+}
+
+.history {
+    padding: 10px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.history p{
     cursor: pointer;
 }
